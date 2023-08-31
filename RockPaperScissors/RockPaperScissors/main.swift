@@ -1,7 +1,7 @@
 //
 //  RockPaperScissors - main.swift
-//  Created by yagom. 
-//  Copyright © yagom academy. All rights reserved.
+//  Created by tacocat.
+//  Copyright © tastycode. All rights reserved.
 // 
 
 import Foundation
