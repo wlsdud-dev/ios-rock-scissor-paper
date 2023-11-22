@@ -6,5 +6,16 @@
 
 import Foundation
 
-print("Hello, World!")
+while true {
+    print("가위(1) 바위(2) 보(3)! <종료 : 0> :")
+    var input = readLine()
+    
+    switch Int(input) {
+    case 1:
+    case 2:
+    case 3:
+    case 0:
+    default :
+    }
+}
 
