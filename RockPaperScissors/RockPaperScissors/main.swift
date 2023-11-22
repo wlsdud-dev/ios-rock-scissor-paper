@@ -42,5 +42,6 @@ while true {
     default :
         print("잘못된 입력입니다. 다시 시도해주세요.")
     }
+    print("상대방의 선택: \(comChoice)")
 }
 
