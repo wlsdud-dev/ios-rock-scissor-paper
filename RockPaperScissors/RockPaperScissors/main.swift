@@ -10,7 +10,7 @@ enum UserChoice: Int, CaseIterable {
     case rock = 2
     case paper = 3
 }
-enum Massages: String {
+enum Messages: String {
     case win = "이겼습니다!"
     case lose = "졌습니다!"
     case draw = "비겼습니다!"
@@ -19,7 +19,7 @@ enum Massages: String {
     case error = "잘못된 입력입니다. 다시 시도해주세요."
 }
 func requestMyHand() -> Int? {
-    print("\(Massages.start.rawValue)", terminator: " ")
+    print(Messages.start.rawValue, terminator: " ")
     guard let myHandInput = readLine(), let myHandChoice = Int(myHandInput), (UserChoice.exit.rawValue...UserChoice.paper.rawValue).contains(myHandChoice) else {
         return nil
     }
@@ -32,28 +32,42 @@ func requestComHand() -> Int? {
     guard let comHandChoice = UserChoice.allCases.randomElement()?.rawValue else { return nil }
     return comHandChoice
 }
-func judgment() -> Massages{
+func judgment() -> Messages{
     guard let myHand = requestMyHand() else {
-        print(Massages.error.rawValue)
-        return Massages.error
+        print(Messages.error.rawValue)
+        return Messages.error
     }
     let comHand = requestComHand()
 
     if myHand == UserChoice.exit.rawValue {
-        print(Massages.gameOver.rawValue)
-        return Massages.gameOver
+        print(Messages.gameOver.rawValue)
+        return Messages.gameOver
     } else if (myHand == UserChoice.scissors.rawValue && comHand == UserChoice.paper.rawValue) ||
               (myHand == UserChoice.rock.rawValue && comHand == UserChoice.scissors.rawValue)  ||
               (myHand == UserChoice.paper.rawValue && comHand == UserChoice.rock.rawValue) {
-        print(Massages.win.rawValue)
-        print(Massages.gameOver.rawValue)
-        return Massages.win
+        print(Messages.win.rawValue)
+        print(Messages.gameOver.rawValue)
+        return Messages.win
     } else if myHand == comHand {
-        print(Massages.draw.rawValue)
-        return Massages.draw
+        print(Messages.draw.rawValue)
+        return Messages.draw
     } else {
-        print(Massages.lose.rawValue)
-        print(Massages.gameOver.rawValue)
-        return Massages.lose
+        print(Messages.lose.rawValue)
+        print(Messages.gameOver.rawValue)
+        return Messages.lose
+    }
+}
+while true {
+    let resultValue = judgment()
+    if resultValue == Messages.gameOver {
+        break
+    } else if resultValue == Messages.win {
+        break
+    } else if resultValue == Messages.lose {
+        break
+    } else if resultValue == Messages.draw {
+        continue
+    } else {
+        continue
     }
 }
