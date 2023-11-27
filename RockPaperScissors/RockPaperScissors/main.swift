@@ -23,9 +23,6 @@ func requestMyHand() -> Int? {
     guard let myHandInput = readLine(), let myHandChoice = Int(myHandInput), (UserChoice.exit.rawValue...UserChoice.paper.rawValue).contains(myHandChoice) else {
         return nil
     }
-    if myHandChoice == UserChoice.exit.rawValue {
-        return UserChoice.exit.rawValue
-    }
     return myHandChoice
 }
 func requestComHand() -> Int? {
