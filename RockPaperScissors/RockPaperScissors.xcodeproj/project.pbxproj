@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C7ABA0E1254EA63000B2367D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABA0E0254EA63000B2367D /* main.swift */; };
+		F339FEFA2B172F0800E8BF00 /* UserSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339FEF92B172F0800E8BF00 /* UserSelection.swift */; };
+		F339FEFC2B1732D800E8BF00 /* MatchAndMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339FEFB2B1732D800E8BF00 /* MatchAndMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		C7ABA0DD254EA63000B2367D /* RockPaperScissors */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RockPaperScissors; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7ABA0E0254EA63000B2367D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F339FEF92B172F0800E8BF00 /* UserSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelection.swift; sourceTree = "<group>"; };
+		F339FEFB2B1732D800E8BF00 /* MatchAndMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchAndMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,19 @@
 		C7ABA0DF254EA63000B2367D /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				F339FEF82B172E9D00E8BF00 /* Enum */,
 				C7ABA0E0254EA63000B2367D /* main.swift */,
 			);
 			path = RockPaperScissors;
+			sourceTree = "<group>";
+		};
+		F339FEF82B172E9D00E8BF00 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				F339FEF92B172F0800E8BF00 /* UserSelection.swift */,
+				F339FEFB2B1732D800E8BF00 /* MatchAndMessage.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +134,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7ABA0E1254EA63000B2367D /* main.swift in Sources */,
+				F339FEFA2B172F0800E8BF00 /* UserSelection.swift in Sources */,
+				F339FEFC2B1732D800E8BF00 /* MatchAndMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

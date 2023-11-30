@@ -3,68 +3,64 @@
 //  Created by tacocat.
 //  Copyright © tastycode. All rights reserved.
 //
+protocol GamePlayer {
+    func gamePlay()
+}
+struct ScissorsRockPaperWinLoseCalculation {
+    static func winLoseCaculation(userSelct: UserSelection, computerSelect: UserSelection) -> Messages? {
+        switch (userSelct, computerSelect) {
+        case (.rock, .scissors), (.paper, .rock), (.scissors, .paper):
+            return .win
+        case (.scissors, .rock), (.rock, .paper), (.paper, .scissors):
+            return .lose
+        case (.scissors, .scissors), (.rock, .rock), (.paper, .paper):
+            return .draw
+        default:
+            return nil
+        }
+    }
+}
+struct ScissorsRockPaperGameController {
+    func gamaePlay() {
+        while true {
+            print("\(Messages.scissorsRockPaperStart.text)", terminator: "")
+            let userInput = GetUserSelection.getUserInput()
+            let select: [UserSelection] = [.scissors, .rock, .paper]
+            
+            guard let computerSelect = select.randomElement() else { return }
+            
+            let scissorsRockPaperResult: Messages? = ScissorsRockPaperWinLoseCalculation.winLoseCaculation(userSelct: userInput, computerSelect: computerSelect)
+            
+            if userInput == .exit { return }
+            
+            switch scissorsRockPaperResult {
+            case .lose:
+                print("\(Messages.lose.text)\n\(Messages.gameOver.text)")
+                return
+            case .win:
+                print("\(Messages.win.text)\n\(Messages.gameOver.text)")
+                return
+            case .draw:
+                print("\(Messages.draw.text)")
+            default:
+                print("\(Messages.error.text)")
+            }
+        }
+    }
+}
+struct GetUserSelection {
+    static func getUserInput() -> UserSelection {
+        let userSelect: String = readLine() ?? String(UserSelection.error.rawValue)
+        let selectedNum: Int? = Int(userSelect)
+        return UserSelection(userSelect: selectedNum)
+    }
+}
+struct MukJjiBbaGameController {
+    
+}
+struct PlayerTurnChange {
+    
+}
 
-enum UserChoice: Int, CaseIterable {
-    case exit = 0
-    case scissors = 1
-    case rock = 2
-    case paper = 3
-}
-enum Messages: String {
-    case win = "이겼습니다!"
-    case lose = "졌습니다!"
-    case draw = "비겼습니다!"
-    case gameOver = "게임 종료"
-    case start = "가위(1) 바위(2) 보(3)! <종료 : 0> :"
-    case error = "잘못된 입력입니다. 다시 시도해주세요."
-}
-func requestMyHand() -> Int? {
-    print(Messages.start.rawValue, terminator: " ")
-    guard let myHandInput = readLine(), let myHandChoice = Int(myHandInput), (UserChoice.exit.rawValue...UserChoice.paper.rawValue).contains(myHandChoice) else {
-        return nil
-    }
-    return myHandChoice
-}
-func requestComHand() -> Int? {
-    guard let comHandChoice = UserChoice.allCases.randomElement()?.rawValue else { return nil }
-    return comHandChoice
-}
-func judgment() -> Messages{
-    guard let myHand = requestMyHand() else {
-        print(Messages.error.rawValue)
-        return Messages.error
-    }
-    let comHand = requestComHand()
-
-    if myHand == UserChoice.exit.rawValue {
-        print(Messages.gameOver.rawValue)
-        return Messages.gameOver
-    } else if (myHand == UserChoice.scissors.rawValue && comHand == UserChoice.paper.rawValue) ||
-              (myHand == UserChoice.rock.rawValue && comHand == UserChoice.scissors.rawValue)  ||
-              (myHand == UserChoice.paper.rawValue && comHand == UserChoice.rock.rawValue) {
-        print(Messages.win.rawValue)
-        print(Messages.gameOver.rawValue)
-        return Messages.win
-    } else if myHand == comHand {
-        print(Messages.draw.rawValue)
-        return Messages.draw
-    } else {
-        print(Messages.lose.rawValue)
-        print(Messages.gameOver.rawValue)
-        return Messages.lose
-    }
-}
-while true {
-    let resultValue = judgment()
-    if resultValue == Messages.gameOver {
-        break
-    } else if resultValue == Messages.win {
-        break
-    } else if resultValue == Messages.lose {
-        break
-    } else if resultValue == Messages.draw {
-        continue
-    } else {
-        continue
-    }
-}
+let game = ScissorsRockPaperGameController()
+game.gamaePlay()
