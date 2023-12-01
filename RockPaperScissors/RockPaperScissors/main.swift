@@ -6,11 +6,11 @@
 
 
 
-let RockScissorsPaperGame = RockScissorsPaperGameController()
-let MukJjiBbaGame = MukJjiBbaGameController()
+let rockScissorsPaperGame = RockScissorsPaperGameController()
+let mukJjiBbaGame = MukJjiBbaGameController()
 
-RockScissorsPaperGame.playGame()
-MukJjiBbaGame.playGame()
+rockScissorsPaperGame.playGame()
+mukJjiBbaGame.playGame()
 
 
 
