@@ -29,7 +29,8 @@
 
 # 🗂️파일구조
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4c734d3-d9db-4362-b929-6f0065471760/d5e4a40c-50b9-4d01-9931-847ee3f64df6/Untitled.png)
+![image](https://github.com/wlsdud-dev/ios-rock-scissor-paper/assets/92171561/6bc680ed-303b-47c9-b051-357146c08e5d)
+
 
 어제 배운 MVC 를 나름대로 적용해서 파일을 나누어 봤습니다.
 
@@ -180,11 +181,11 @@ struct WinLoseCalculation {
 
 # 순서도
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4c734d3-d9db-4362-b929-6f0065471760/387a4875-60b5-45b4-b9bb-e1e3776e123f/Untitled.png)
+![image](https://github.com/wlsdud-dev/ios-rock-scissor-paper/assets/92171561/52aece3a-ab61-4fe6-a70e-10795c317201)
 
 # 실행결과
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/c4c734d3-d9db-4362-b929-6f0065471760/af7076f6-6265-4a87-814f-9cc014ff27a8/Untitled.png)
+![image](https://github.com/wlsdud-dev/ios-rock-scissor-paper/assets/92171561/31b2128e-04a4-43b4-8a5a-d05893aa54d1)
 
 턴이 변경되었음을 알려주는 메세지와 각자의 손패가 무엇인지 알려주는 메세지를 추가적으로 넣어주었습니다. 원래는 테스트용으로 만들었는데 간단한 코드라서 제외시키진 않았습니다.
 
