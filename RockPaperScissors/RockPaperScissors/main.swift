@@ -6,13 +6,11 @@
 
 
 
-let RPSGame = ScissorsRockPaperGameController()
-let MJBGame = MJBGameController()
+let RockScissorsPaperGame = RockScissorsPaperGameController()
+let MukJjiBbaGame = MukJjiBbaGameController()
 
-RPSGame.RPSGamePlay()
-MJBGame.MJBGamePlay()
-
-
+RockScissorsPaperGame.playGame()
+MukJjiBbaGame.playGame()
 
 
 

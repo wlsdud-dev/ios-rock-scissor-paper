@@ -1,7 +1,7 @@
 
 
 struct WinLoseCalculation {
-    static func RPSWinLoseCaculation(userSelect: SelectionCases, computerSelect: SelectionCases) -> Messages? {
+    static func rockScissorsPaperWinLoseCaculation(userSelect: SelectionCases, computerSelect: SelectionCases) -> Messages? {
         switch (userSelect, computerSelect) {
         case (.rock, .scissors), (.paper, .rock), (.scissors, .paper):
             return .win
@@ -14,7 +14,7 @@ struct WinLoseCalculation {
         }
     }
     
-    static func MJBWinLoseCalculation(userSelect: SelectionCases, computerSelect: SelectionCases) -> Messages? {
+    static func mukJjiBbaWinLoseCalculation(userSelect: SelectionCases, computerSelect: SelectionCases) -> Messages? {
         
         switch Turn.currentTurn {
         case .myTurn:

@@ -71,7 +71,7 @@
 		C7ABA0DF254EA63000B2367D /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
-				F339FEF82B172E9D00E8BF00 /* Enum */,
+				F339FEF82B172E9D00E8BF00 /* Enums */,
 				C7ABA0E0254EA63000B2367D /* main.swift */,
 				84FC20862B18B2BA009F3C0D /* GameController.swift */,
 				84FC20882B18B33B009F3C0D /* WinLoseCalculator.swift */,
@@ -80,7 +80,7 @@
 			path = RockPaperScissors;
 			sourceTree = "<group>";
 		};
-		F339FEF82B172E9D00E8BF00 /* Enum */ = {
+		F339FEF82B172E9D00E8BF00 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				F339FEF92B172F0800E8BF00 /* UserSelection.swift */,
@@ -88,7 +88,7 @@
 				84FC20822B18B24A009F3C0D /* GameMode.swift */,
 				84FC20842B18B25F009F3C0D /* Turn.swift */,
 			);
-			path = Enum;
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,33 +1,35 @@
 
+protocol GameController {
+    func playGame()
+}
 
-struct ScissorsRockPaperGameController {
-    func RPSGamePlay() {
-        while GameMode.gameMode == .RPS {
-            print("\(Messages.scissorsRockPaperStart.text)", terminator: "")
+struct RockScissorsPaperGameController: GameController {
+    func playGame() {
+        while GameMode.gameMode == .RockScissorsPaper {
+            print("\(Messages.RockscissorsPaperStart.text)", terminator: "")
             
             let userInput = HandSelection.getUserInput()
             let computerSelect = HandSelection.computerHandSelect()
             
-            //손패 결정
             
             
-            let scissorsRockPaperResult: Messages? = WinLoseCalculation.RPSWinLoseCaculation(userSelect: userInput, computerSelect: computerSelect)
-            // 승 패 비김 판별
+            let rockScissorsPaperResult: Messages? = WinLoseCalculation.rockScissorsPaperWinLoseCaculation(userSelect: userInput, computerSelect: computerSelect)
+            
             
             if userInput == .exit { print("\(Messages.gameOver.text)"); return }
             
-            print("컴퓨터 : \(computerSelect)  나 : \(userInput)")              //TODO: 삭제할거
+            print("컴퓨터 : \(computerSelect)  나 : \(userInput)")
             
-            switch scissorsRockPaperResult {
+            switch rockScissorsPaperResult {
             case .lose:
                 print("\(Messages.lose.text)")
                 Turn.currentTurn = Turn.computerTurn
-                GameMode.gameMode = .MJB
+                GameMode.gameMode = .MukJjiBba
                 return
             case .win:
                 print("\(Messages.win.text)")
                 Turn.currentTurn = Turn.myTurn
-                GameMode.gameMode = .MJB
+                GameMode.gameMode = .MukJjiBba
                 return
             case .draw:
                 print("\(Messages.draw.text)")
@@ -38,9 +40,9 @@ struct ScissorsRockPaperGameController {
     }
 }
 
-struct MJBGameController {
-    func MJBGamePlay() {
-        while GameMode.gameMode == .MJB {
+struct MukJjiBbaGameController: GameController {
+    func playGame() {
+        while GameMode.gameMode == .MukJjiBba {
             print("\(Messages.mukJjiBbaStart.text)", terminator: "")
             
             let userInput = HandSelection.getUserInput()
@@ -50,18 +52,18 @@ struct MJBGameController {
             if userInput == .exit { print("\(Messages.gameOver.text)"); return }
             if userInput == SelectionCases.error { Turn.currentTurn = .computerTurn }
             
-            let MJBGameResult: Messages? = WinLoseCalculation.MJBWinLoseCalculation(userSelect: userInput, computerSelect: computerSelect)
+            let mukJjiBbaGameResult: Messages? = WinLoseCalculation.mukJjiBbaWinLoseCalculation(userSelect: userInput, computerSelect: computerSelect)
             
-            print("컴퓨터 : \(computerSelect)  나 : \(userInput)")      //TODO: 삭제할거
+            print("컴퓨터 : \(computerSelect)  나 : \(userInput)")
             
-            switch MJBGameResult {
+            switch mukJjiBbaGameResult {
             case .lose:
                 print("\(Messages.lose.text)\n\(Messages.gameOver.text)")
-                GameMode.gameMode = .RPS
+                GameMode.gameMode = .RockScissorsPaper
                 return
             case .win:
                 print("\(Messages.win.text)\n\(Messages.gameOver.text)")
-                GameMode.gameMode = .RPS
+                GameMode.gameMode = .RockScissorsPaper
                 return
             case .nextTurn:
                 print("\(Messages.nextTurn.text)")

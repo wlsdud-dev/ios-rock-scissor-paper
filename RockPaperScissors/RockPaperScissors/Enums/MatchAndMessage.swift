@@ -10,13 +10,11 @@ enum Messages {
     case lose
     case draw
     case gameOver
-    case scissorsRockPaperStart
+    case RockscissorsPaperStart
     case mukJjiBbaStart
     case changeTurn
     case nextTurn
     case error
-    
-    
     
     var text: String {
         switch self {
@@ -28,7 +26,7 @@ enum Messages {
             return "비겼습니다!"
         case .gameOver:
             return "게임 종료"
-        case .scissorsRockPaperStart:
+        case .RockscissorsPaperStart:
             return "가위(1) 바위(2) 보(3)! <종료 : 0> : "
         case .mukJjiBbaStart:
             return "[\(Turn.currentTurn.caseToString()) 턴] 묵(1), 찌(2), 빠(3)! <종료 : 0> : "

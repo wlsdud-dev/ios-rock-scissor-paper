@@ -5,10 +5,10 @@ struct HandSelection {
     static func getUserInput() -> SelectionCases {
         let userSelect: String = readLine() ??  String(SelectionCases.error.rawValue)
         let selectedNum: Int? = Int(userSelect)
-        if GameMode.gameMode == .RPS {
-            return SelectionCases(RPSUserSelect: selectedNum)
+        if GameMode.gameMode == .RockScissorsPaper {
+            return SelectionCases(RockScissorsPaperUserSelect: selectedNum)
         } else {
-            return SelectionCases(MJBUserSelect: selectedNum)
+            return SelectionCases(MukJjiBbaUserSelect: selectedNum)
         }
     }
     

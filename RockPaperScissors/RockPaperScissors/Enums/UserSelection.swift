@@ -1,9 +1,4 @@
-//
-//  UserChoice.swift
-//  RockPaperScissors
-//
-//  Created by Jin-Mac on 11/29/23.
-//
+
 
 enum SelectionCases: Int {
     case exit
@@ -12,8 +7,8 @@ enum SelectionCases: Int {
     case paper
     case error
     
-    init(RPSUserSelect :Int?) {
-        switch RPSUserSelect {
+    init(RockScissorsPaperUserSelect :Int?) {
+        switch RockScissorsPaperUserSelect {
         case 1:
             self = .scissors
         case 2:
@@ -27,8 +22,8 @@ enum SelectionCases: Int {
         }
     }
     
-    init(MJBUserSelect :Int?) {
-        switch MJBUserSelect {
+    init(MukJjiBbaUserSelect :Int?) {
+        switch MukJjiBbaUserSelect {
         case 1:
             self = .rock
         case 2:

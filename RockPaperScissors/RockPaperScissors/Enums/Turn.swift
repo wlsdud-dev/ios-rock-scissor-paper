@@ -15,5 +15,4 @@ enum Turn {
             return "컴퓨터"
         }
     }
-    
 }
