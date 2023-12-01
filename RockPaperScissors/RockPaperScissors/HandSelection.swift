@@ -1,8 +1,9 @@
 
 
 struct HandSelection {
+    
     static func getUserInput() -> SelectionCases {
-        let userSelect: String = readLine() ?? String(SelectionCases.error.rawValue)
+        let userSelect: String = readLine() ??  String(SelectionCases.error.rawValue)
         let selectedNum: Int? = Int(userSelect)
         if GameMode.gameMode == .RPS {
             return SelectionCases(RPSUserSelect: selectedNum)

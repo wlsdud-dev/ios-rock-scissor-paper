@@ -20,7 +20,7 @@ struct ScissorsRockPaperGameController {
             
             switch scissorsRockPaperResult {
             case .lose:
-                print("\(Messages.lose.text)\n\(Messages.gameOver.text)")
+                print("\(Messages.lose.text)")
                 Turn.currentTurn = Turn.computerTurn
                 GameMode.gameMode = .MJB
                 return
@@ -46,9 +46,11 @@ struct MJBGameController {
             let userInput = HandSelection.getUserInput()
             let computerSelect = HandSelection.computerHandSelect()
             
-            let MJBGameResult: Messages? = WinLoseCalculation.MJBWinLoseCalculation(userSelect: userInput, computerSelect: computerSelect)
             
             if userInput == .exit { print("\(Messages.gameOver.text)"); return }
+            if userInput == SelectionCases.error { Turn.currentTurn = .computerTurn }
+            
+            let MJBGameResult: Messages? = WinLoseCalculation.MJBWinLoseCalculation(userSelect: userInput, computerSelect: computerSelect)
             
             print("컴퓨터 : \(computerSelect)  나 : \(userInput)")      //TODO: 삭제할거
             
