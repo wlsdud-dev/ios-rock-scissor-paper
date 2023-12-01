@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84FC20832B18B24A009F3C0D /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC20822B18B24A009F3C0D /* GameMode.swift */; };
+		84FC20852B18B25F009F3C0D /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC20842B18B25F009F3C0D /* Turn.swift */; };
+		84FC20872B18B2BA009F3C0D /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC20862B18B2BA009F3C0D /* GameController.swift */; };
+		84FC20892B18B33B009F3C0D /* WinLoseCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC20882B18B33B009F3C0D /* WinLoseCalculator.swift */; };
+		84FC208B2B18B365009F3C0D /* HandSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC208A2B18B365009F3C0D /* HandSelection.swift */; };
 		C7ABA0E1254EA63000B2367D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABA0E0254EA63000B2367D /* main.swift */; };
 		F339FEFA2B172F0800E8BF00 /* UserSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339FEF92B172F0800E8BF00 /* UserSelection.swift */; };
 		F339FEFC2B1732D800E8BF00 /* MatchAndMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339FEFB2B1732D800E8BF00 /* MatchAndMessage.swift */; };
@@ -25,6 +30,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		84FC20822B18B24A009F3C0D /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		84FC20842B18B25F009F3C0D /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
+		84FC20862B18B2BA009F3C0D /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		84FC20882B18B33B009F3C0D /* WinLoseCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinLoseCalculator.swift; sourceTree = "<group>"; };
+		84FC208A2B18B365009F3C0D /* HandSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandSelection.swift; sourceTree = "<group>"; };
 		C7ABA0DD254EA63000B2367D /* RockPaperScissors */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RockPaperScissors; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7ABA0E0254EA63000B2367D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F339FEF92B172F0800E8BF00 /* UserSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSelection.swift; sourceTree = "<group>"; };
@@ -61,19 +71,24 @@
 		C7ABA0DF254EA63000B2367D /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
-				F339FEF82B172E9D00E8BF00 /* Enum */,
+				F339FEF82B172E9D00E8BF00 /* Enums */,
 				C7ABA0E0254EA63000B2367D /* main.swift */,
+				84FC20862B18B2BA009F3C0D /* GameController.swift */,
+				84FC20882B18B33B009F3C0D /* WinLoseCalculator.swift */,
+				84FC208A2B18B365009F3C0D /* HandSelection.swift */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
 		};
-		F339FEF82B172E9D00E8BF00 /* Enum */ = {
+		F339FEF82B172E9D00E8BF00 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
 				F339FEF92B172F0800E8BF00 /* UserSelection.swift */,
 				F339FEFB2B1732D800E8BF00 /* MatchAndMessage.swift */,
+				84FC20822B18B24A009F3C0D /* GameMode.swift */,
+				84FC20842B18B25F009F3C0D /* Turn.swift */,
 			);
-			path = Enum;
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,9 +148,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FC20852B18B25F009F3C0D /* Turn.swift in Sources */,
+				84FC20872B18B2BA009F3C0D /* GameController.swift in Sources */,
+				84FC20832B18B24A009F3C0D /* GameMode.swift in Sources */,
 				C7ABA0E1254EA63000B2367D /* main.swift in Sources */,
 				F339FEFA2B172F0800E8BF00 /* UserSelection.swift in Sources */,
+				84FC20892B18B33B009F3C0D /* WinLoseCalculator.swift in Sources */,
 				F339FEFC2B1732D800E8BF00 /* MatchAndMessage.swift in Sources */,
+				84FC208B2B18B365009F3C0D /* HandSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
