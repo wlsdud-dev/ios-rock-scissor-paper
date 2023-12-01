@@ -52,6 +52,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84FC208C2B19A230009F3C0D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84FC20862B18B2BA009F3C0D /* GameController.swift */,
+				84FC208A2B18B365009F3C0D /* HandSelection.swift */,
+				84FC20882B18B33B009F3C0D /* WinLoseCalculator.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C7ABA0D4254EA63000B2367D = {
 			isa = PBXGroup;
 			children = (
@@ -71,16 +81,14 @@
 		C7ABA0DF254EA63000B2367D /* RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
-				F339FEF82B172E9D00E8BF00 /* Enums */,
+				F339FEF82B172E9D00E8BF00 /* Model */,
+				84FC208C2B19A230009F3C0D /* Controller */,
 				C7ABA0E0254EA63000B2367D /* main.swift */,
-				84FC20862B18B2BA009F3C0D /* GameController.swift */,
-				84FC20882B18B33B009F3C0D /* WinLoseCalculator.swift */,
-				84FC208A2B18B365009F3C0D /* HandSelection.swift */,
 			);
 			path = RockPaperScissors;
 			sourceTree = "<group>";
 		};
-		F339FEF82B172E9D00E8BF00 /* Enums */ = {
+		F339FEF82B172E9D00E8BF00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F339FEF92B172F0800E8BF00 /* UserSelection.swift */,
@@ -88,7 +96,7 @@
 				84FC20822B18B24A009F3C0D /* GameMode.swift */,
 				84FC20842B18B25F009F3C0D /* Turn.swift */,
 			);
-			path = Enums;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
