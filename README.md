@@ -29,7 +29,8 @@
 
 # 🗂️파일구조
 
-![image](https://github.com/wlsdud-dev/ios-rock-scissor-paper/assets/92171561/6bc680ed-303b-47c9-b051-357146c08e5d)
+![image](https://github.com/wlsdud-dev/ios-rock-scissor-paper/assets/92171561/b33514b5-b685-4731-8aa5-ec3d529f9210)
+
 
 
 어제 배운 MVC 를 나름대로 적용해서 파일을 나누어 봤습니다.
